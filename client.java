@@ -95,7 +95,9 @@ public final class client extends RSApplet {
                     {
                         Thread.sleep(1000L);
                     }
-                    catch(Exception _ex) { }
+                    catch(Exception _ex) {
+                        _ex.printStackTrace();
+                    }
                 }
 
                 j *= 2;
@@ -594,7 +596,9 @@ public final class client extends RSApplet {
             }
             method63();
         }
-        catch(Exception exception) { }
+        catch(Exception exception) {
+            exception.printStackTrace();
+        }
         ObjectDef.mruNodes1.unlinkAll();
         if(super.gameFrame != null)
         {
@@ -822,7 +826,9 @@ public final class client extends RSApplet {
             {
                 Thread.sleep(1000L);
             }
-            catch(Exception _ex) { }
+            catch(Exception _ex) {
+                _ex.printStackTrace();
+            }
         while(true);
     }
 
@@ -1883,7 +1889,9 @@ public final class client extends RSApplet {
             if(socketStream != null)
                 socketStream.close();
         }
-        catch(Exception _ex) { }
+        catch(Exception _ex) {
+            _ex.printStackTrace();
+        }
         socketStream = null;
         loggedIn = false;
         loginScreenState = 0;
@@ -2307,7 +2315,9 @@ public final class client extends RSApplet {
         {
             j = Integer.parseInt(getParameter("fl_icon"));
         }
-        catch(Exception _ex) { }
+        catch(Exception _ex) {
+            _ex.printStackTrace();
+        }
         if(j == 0)
         {
             for(int k = 0; k < 12; k++)
@@ -2429,6 +2439,8 @@ public final class client extends RSApplet {
         }
         catch(Exception exception)
         {
+            exception.printStackTrace();
+            System.exit(1);
         }
     }
 
@@ -3265,7 +3277,9 @@ public final class client extends RSApplet {
             if(decompressors[0] != null)
                 abyte0 = decompressors[0].decompress(i);
         }
-        catch(Exception _ex) { }
+        catch(Exception _ex) {
+            _ex.printStackTrace();
+        }
         if(abyte0 != null)
         {
     //        aCRC32_930.reset();
@@ -3322,6 +3336,7 @@ public final class client extends RSApplet {
                 }
                 catch(Exception _ex)
                 {
+                    _ex.printStackTrace();
                     decompressors[0] = null;
                 }
    /*             if(abyte0 != null)
@@ -3381,7 +3396,9 @@ public final class client extends RSApplet {
                     {
                         Thread.sleep(1000L);
                     }
-                    catch(Exception _ex) { }
+                    catch(Exception _ex) {
+                        _ex.printStackTrace();
+                    }
                 }
 
                 l *= 2;
@@ -4524,7 +4541,9 @@ public final class client extends RSApplet {
             if(socketStream != null)
                 socketStream.close();
         }
-        catch(Exception _ex) { }
+        catch(Exception _ex) {
+            _ex.printStackTrace();
+        }
         socketStream = null;
         stopMidi();
         if(mouseDetection != null)
@@ -4768,7 +4787,9 @@ public final class client extends RSApplet {
                         {
                             i1 = Integer.parseInt(amountOrNameInput);
                         }
-                        catch(Exception _ex) { }
+                        catch(Exception _ex) {
+                            _ex.printStackTrace();
+                        }
                         stream.createFrame(208);
                         stream.writeDWord(i1);
                     }
@@ -5757,7 +5778,9 @@ public final class client extends RSApplet {
                 {
                     Thread.sleep(2000L);
                 }
-                catch(Exception _ex) { }
+                catch(Exception _ex) {
+                    _ex.printStackTrace();
+                }
                 login(s, s1, flag);
                 return;
             }
@@ -5985,7 +6008,9 @@ public final class client extends RSApplet {
                     {
                         Thread.sleep(1000L);
                     }
-                    catch(Exception _ex) { }
+                    catch(Exception _ex) {
+                        _ex.printStackTrace();
+                    }
                 }
 
                 login(s, s1, flag);
@@ -6001,7 +6026,9 @@ public final class client extends RSApplet {
                         {
                             Thread.sleep(2000L);
                         }
-                        catch(Exception _ex) { }
+                        catch(Exception _ex) {
+                            _ex.printStackTrace();
+                        }
                         loginFailures++;
                         login(s, s1, flag);
                         return;
@@ -6691,7 +6718,9 @@ public final class client extends RSApplet {
                 {
                     nextSong = Integer.parseInt(getParameter("music"));
                 }
-                catch(Exception _ex) { }
+                catch(Exception _ex) {
+                    _ex.printStackTrace();
+                }
                 songChanging = true;
                 onDemandFetcher.method558(2, nextSong);
                 while(onDemandFetcher.getNodeCount() > 0)
@@ -6701,7 +6730,9 @@ public final class client extends RSApplet {
                     {
                         Thread.sleep(100L);
                     }
-                    catch(Exception _ex) { }
+                    catch(Exception _ex) {
+                        _ex.printStackTrace();
+                    }
                     if(onDemandFetcher.anInt1349 > 3)
                     {
                         loadError();
@@ -6724,7 +6755,9 @@ public final class client extends RSApplet {
                 {
                     Thread.sleep(100L);
                 }
-                catch(Exception _ex) { }
+                catch(Exception _ex) {
+                    _ex.printStackTrace();
+                }
                 if(onDemandFetcher.anInt1349 > 3)
                 {
                     loadError();
@@ -6751,7 +6784,9 @@ public final class client extends RSApplet {
                 {
                     Thread.sleep(100L);
                 }
-                catch(Exception _ex) { }
+                catch(Exception _ex) {
+                    _ex.printStackTrace();
+                }
             }
             if(decompressors[0] != null)
             {
@@ -6779,7 +6814,9 @@ public final class client extends RSApplet {
                     {
                         Thread.sleep(100L);
                     }
-                    catch(Exception _ex) { }
+                    catch(Exception _ex) {
+                        _ex.printStackTrace();
+                    }
                 }
             }
             k = onDemandFetcher.getVersionCount(0);
